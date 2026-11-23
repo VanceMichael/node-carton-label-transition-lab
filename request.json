@@ -1,0 +1,10 @@
+{
+  "market": "CN",
+  "store": "虹桥门店",
+  "deliveries": [
+    "LOT28",
+    "LOT30",
+    "LOT31"
+  ],
+  "requestDay": "2027-10-01"
+}

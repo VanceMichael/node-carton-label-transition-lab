@@ -1,0 +1,268 @@
+{
+  "phases": [
+    "first",
+    "lag",
+    "change"
+  ],
+  "routes": [
+    {
+      "path": "/filings",
+      "method": "GET",
+      "status": 200,
+      "phase": "change",
+      "data": [
+        {
+          "market": "CN",
+          "gtin": "880700",
+          "code": "C1",
+          "effective": "2026-12-01",
+          "panels": [
+            "F1",
+            "B1"
+          ],
+          "audience": "adult"
+        },
+        {
+          "market": "CN",
+          "gtin": "880700",
+          "code": "C2",
+          "effective": "2027-05-01",
+          "panels": [
+            "F2",
+            "B2",
+            "T2"
+          ],
+          "audience": "child",
+          "overlay": [
+            30,
+            30
+          ]
+        },
+        {
+          "market": "SG",
+          "gtin": "880700",
+          "code": "S2",
+          "effective": "2027-05-01",
+          "panels": [
+            "F2",
+            "B2"
+          ],
+          "audience": "adult"
+        }
+      ]
+    },
+    {
+      "path": "/filings",
+      "method": "GET",
+      "status": 200,
+      "data": [
+        {
+          "market": "CN",
+          "gtin": "880700",
+          "code": "C1",
+          "effective": "2026-12-01",
+          "panels": [
+            "F1",
+            "B1"
+          ],
+          "audience": "adult"
+        },
+        {
+          "market": "CN",
+          "gtin": "880700",
+          "code": "C2",
+          "effective": "2027-05-01",
+          "panels": [
+            "F2",
+            "B2",
+            "T2"
+          ],
+          "audience": "child",
+          "overlay": [
+            30,
+            31
+          ]
+        },
+        {
+          "market": "SG",
+          "gtin": "880700",
+          "code": "S2",
+          "effective": "2027-05-01",
+          "panels": [
+            "F2",
+            "B2"
+          ],
+          "audience": "adult"
+        }
+      ]
+    },
+    {
+      "path": "/panel",
+      "method": "GET",
+      "status": 200,
+      "params": {
+        "id": "F1",
+        "filing": "C1"
+      },
+      "file": "C1-F1-all.svg",
+      "mime": "image/svg+xml"
+    },
+    {
+      "path": "/panel",
+      "method": "GET",
+      "status": 200,
+      "params": {
+        "id": "B1",
+        "filing": "C1"
+      },
+      "file": "C1-B1-all.svg",
+      "mime": "image/svg+xml"
+    },
+    {
+      "path": "/panel",
+      "method": "GET",
+      "status": 200,
+      "params": {
+        "id": "F2",
+        "filing": "C2"
+      },
+      "file": "C2-F2-all.svg",
+      "mime": "image/svg+xml"
+    },
+    {
+      "path": "/panel",
+      "method": "GET",
+      "status": 200,
+      "phase": "change",
+      "params": {
+        "id": "B2",
+        "filing": "C2"
+      },
+      "file": "C2-B2-change.svg",
+      "mime": "image/svg+xml"
+    },
+    {
+      "path": "/panel",
+      "method": "GET",
+      "status": 200,
+      "phase": "first",
+      "params": {
+        "id": "B2",
+        "filing": "C2"
+      },
+      "file": "C2-B2-first.svg",
+      "mime": "image/svg+xml"
+    },
+    {
+      "path": "/panel",
+      "method": "GET",
+      "status": 200,
+      "params": {
+        "id": "T2",
+        "filing": "C2"
+      },
+      "file": "C2-T2-all.svg",
+      "mime": "image/svg+xml"
+    },
+    {
+      "path": "/panel",
+      "method": "GET",
+      "status": 200,
+      "params": {
+        "id": "B2",
+        "filing": "S2"
+      },
+      "file": "S2-B2-all.svg",
+      "mime": "image/svg+xml"
+    },
+    {
+      "path": "/deliveries",
+      "method": "GET",
+      "status": 200,
+      "data": [
+        {
+          "lot": "LOT28",
+          "number": 28,
+          "gtin": "880700",
+          "produced": "2027-04-29",
+          "bestBefore": "2028-02-10",
+          "photoPanels": [
+            "F1"
+          ]
+        },
+        {
+          "lot": "LOT30",
+          "number": 30,
+          "gtin": "880700",
+          "produced": "2027-05-03",
+          "bestBefore": "2028-02-10",
+          "photoPanels": [
+            "F2"
+          ]
+        },
+        {
+          "lot": "LOT31",
+          "number": 31,
+          "gtin": "880700",
+          "produced": "2027-05-04",
+          "bestBefore": "2028-02-10",
+          "photoPanels": [
+            "F2"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/sales-existing",
+      "method": "GET",
+      "status": 200,
+      "data": [
+        {
+          "lot": "LOT28",
+          "accepted": "2027-06-03",
+          "filing": "C1",
+          "permit": "M002"
+        },
+        {
+          "lot": "LOT31",
+          "accepted": "2027-07-03",
+          "filing": "C2",
+          "permit": "M008"
+        }
+      ]
+    },
+    {
+      "path": "/claims-policy",
+      "method": "GET",
+      "status": 200,
+      "data": {
+        "child": [
+          "日常清洁",
+          "防龋",
+          "防蛀"
+        ],
+        "adult": [
+          "日常清洁",
+          "防龋",
+          "防蛀",
+          "去渍美白"
+        ],
+        "manual": [
+          "亮白"
+        ]
+      }
+    },
+    {
+      "path": "/panel",
+      "method": "GET",
+      "status": 200,
+      "phase": "lag",
+      "params": {
+        "id": "B2",
+        "filing": "C2"
+      },
+      "file": "cached-B2.svg",
+      "mime": "image/svg+xml"
+    }
+  ]
+}
